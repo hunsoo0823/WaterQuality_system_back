@@ -38,3 +38,7 @@ class IndexView(View):
                             turValue = request.POST['turValue'])
         lora.save()
         return HttpResponse(status=200)
+
+    def put(self, requset):
+        requset = json.loads(requset.body)
+        id = requset['id']
